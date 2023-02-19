@@ -1,7 +1,6 @@
 package sample.routes
 
 import react.FC
-import react.Fragment
 import react.Props
 import react.create
 import react.dom.html.ReactHTML.h1
@@ -26,18 +25,14 @@ val headerRoutes =  FC<Props> {
         //The Home Page Route
         Route{
             path = "/"
-            index
-            element = Fragment.create{
-                homeComponent()
-            }
+            index = true
+            element = homeComponent.create()
         }
 
         //The About us Page Route
         Route{
             path = "/aboutUs"
-            element = Fragment.create{
-                aboutUsComponent()
-            }
+            element = aboutUsComponent.create()
         }
     }
 
